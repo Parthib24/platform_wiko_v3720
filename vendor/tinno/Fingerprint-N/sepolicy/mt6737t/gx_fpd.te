@@ -1,0 +1,77 @@
+type gx_fpd, domain;
+type gx_fpd_exec, exec_type, file_type;
+#type gx_fpd_data_file, file_type, data_file_type;
+#type gx_fpd_service,service_manager_type;
+#type gx_fpd_device, dev_type;
+
+type goodix_fingerprint_service,service_manager_type;
+
+init_daemon_domain(gx_fpd)
+binder_use(gx_fpd)
+
+# need to find KeyStore and add self
+allow gx_fpd gx_fpd_service:service_manager { add find };
+
+# allow HAL module to read dir contents
+allow gx_fpd gx_fpd_data_file:file { create_file_perms };
+
+# allow HAL module to read/write/unlink contents of this dir
+allow gx_fpd gx_fpd_data_file:dir rw_dir_perms;
+
+file_type_auto_trans(gx_fpd,system_data_file,gx_fpd_data_file);
+
+# For permissions checking
+binder_call(gx_fpd, system_server);
+binder_call(system_server, gx_fpd)
+allow system_server gx_fpd_service:service_manager find;
+
+binder_call(gx_fpd, fingerprintd);
+binder_call(fingerprintd, gx_fpd);
+allow gx_fpd permission_service:service_manager find;
+allow fingerprintd gx_fpd_service:service_manager find;
+# Allow system process to relabel the fingerprint directory after mkdir
+allow system_server gx_fpd_data_file:dir {r_dir_perms relabelto};
+
+# goodix fingerprint
+allow gx_fpd self:process execmem;
+allow gx_fpd kernel:system module_request;
+allow gx_fpd fuse:dir create_dir_perms;
+allow gx_fpd fuse:file create_file_perms;
+allow gx_fpd self:capability { dac_override dac_read_search };
+
+# Access fingerprint devices at all.
+allow gx_fpd gx_fpd_device:chr_file rw_file_perms;
+
+# fingerprint data
+r_dir_file(gx_fpd, gx_fpd_data_file)
+
+# Grant access to fingerprint files to gx_fpd
+allow gx_fpd gx_fpd_data_file:dir ra_dir_perms;
+allow gx_fpd gx_fpd_data_file:file create_file_perms;
+
+
+# for beanpod teei_fp_device
+allow gx_fpd teei_fp_device:chr_file rw_file_perms;
+allow factory teei_fp_device:chr_file { read write ioctl open };
+
+#for netlink use
+allow gx_fpd self:netlink_socket { read bind create write getattr setopt };
+
+#for factory test
+allow factory gx_fpd_device:chr_file { read write ioctl open };
+allow factory self:netlink_socket { read bind create write getattr setopt };
+
+allow system_app goodix_fingerprint_service:service_manager { add find };
+allow untrusted_app goodix_fingerprint_service:service_manager { find };
+binder_call(system_app, gx_fpd);
+binder_call(gx_fpd, system_app);
+
+allow gx_fpd fingerprint_service:service_manager { find };
+
+# allow sdcard access right
+allow gx_fpd media_rw_data_file:dir { search write add_name };
+allow gx_fpd media_rw_data_file:file { create write open read getattr };
+
+#allow for power manager
+allow gx_fpd power_service:service_manager { find }; 
+

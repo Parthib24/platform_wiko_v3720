@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<string name="zzz_security_settings_fingerprint_enroll_find_sensor_message">Localiza el sensor de huellas digitales en la parte inferior del teléfono.</string>
+
+</resources>

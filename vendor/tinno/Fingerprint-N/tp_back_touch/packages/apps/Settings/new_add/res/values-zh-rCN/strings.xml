@@ -1,0 +1,14 @@
+<resources>
+    <string name="backtouch">背部触控</string>
+    <string name="back_touch_open_camera_title">双击打开相机</string>
+    <string name="back_touch_open_camera_summary">灭屏状态且已启动智能动作，双击触控区域打开相机</string>
+    <string name="zzz_back_touch_open_camera_summary">双击触控区域打开相机,如果处于灭屏状态下,需要先开启智能动作</string>
+    <string name="back_touch_take_photos_title">单击触控区域拍照</string>
+    <string name="back_touch_take_photos_summary">在相机取景界面单击触控区域拍照</string>
+    <string name="back_touch_change_screen_title">长按触控区域切换摄像头</string>
+    <string name="back_touch_change_screen_summary">在相机取景界面长按触控区域切换摄像头</string>
+    <string name="back_touch_call_title">双击接听电话</string>
+    <string name="back_touch_call_summary">来电时，双击触控区域接听电话</string>
+    <string name="smart_awake_title_opencamera">打开相机</string>
+    <string name="smart_awake_tutorial_opencamera">灭屏状态下，双击触控区域打开相机.</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+
+    <setting name="feature_fingerprint_touch_default_status" value="0"/>
+    <setting name="feature_fingerprint_back_navigation_default_status" value="0"/>
+    <setting name="feature_fingerprint_is_back_sensor" value="1"/>
+    <setting name="feature_fingerprint_is_camera_capture" value="1"/>
+
+    <setting name="feature_fingerprint_qwk_bl_trigger_delay" value="0"/>
+    <setting name="feature_fingerprint_qwk_wakeup_finish_delay" value="0"/>
+    <setting name="feature_fingerprint_back_key_vib_time" value="40"/>
+    <setting name="feature_fingerprint_auth_success_vib_time" value="40"/>
+
+</resources>
+
+

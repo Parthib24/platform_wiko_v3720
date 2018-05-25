@@ -1,0 +1,8 @@
+# ==============================================
+# TINNO Policy Rule
+# 
+# ==============================================
+
+#TZ LOG
+persist.tinno.fp.tz_log     u:object_r:system_prop:s0
+

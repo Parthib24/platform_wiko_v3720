@@ -1,0 +1,46 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_app_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    tools:context=".AppLockActivity" >
+
+      <ImageView 
+			android:id="@+id/id_app_icon"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="15dp"
+			android:layout_marginTop="10dp"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:src="@drawable/ic_launcher"
+			/>
+      <TextView 
+          android:id="@+id/id_app_name"
+          android:layout_width="180dp"
+          android:layout_height="wrap_content"
+		  android:layout_marginLeft="20dp"
+		  android:layout_marginTop="20dp"
+		  android:ellipsize="end"
+		  android:maxLines="1"
+		  android:layout_toRightOf="@id/id_app_icon"
+		  android:text="@string/quick_action_activity_title"
+          />
+      
+      
+<RelativeLayout
+      android:id="@+id/id_option_btn_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+      <Button 
+			android:id="@+id/id_option_btn"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="25dp"
+			android:layout_marginTop="10dp"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+          />
+ </RelativeLayout>
+ 
+
+</RelativeLayout>

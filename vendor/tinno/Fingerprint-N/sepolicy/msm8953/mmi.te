@@ -1,0 +1,4 @@
+allow mmi gx_fpd_device:chr_file { read write ioctl open };
+allow mmi elanfp_device:chr_file { read write ioctl open };
+allow mmi system_prop:property_service set;
+allow mmi system_radio_prop:property_service set;

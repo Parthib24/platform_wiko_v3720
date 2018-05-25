@@ -1,0 +1,26 @@
+#ifndef FP_PROPERTY_H
+#define FP_PROPERTY_H
+
+#define SET_PROPERTY_CMD_FINGER_DETECT_MASK             0x0
+#define SET_PROPERTY_CMD_ENABLE_BOUNDARY                0x1
+#define SET_PROPERTY_CMD_RAW_CAPTURE_ENABLE             0x2
+#define SET_PROPERTY_CMD_SELFTEST                       0x3
+#define SET_PROPERTY_CMD_TEST_IMAGE_FORMAT              0x4
+#define SET_PROPERTY_CMD_IMAGE_QUALITY_CAPTURE          0x5
+#define SET_PROPERTY_CMD_WAKEUP_SYSTEM                  0x6
+#define SET_PROPERTY_CMD_GESTURE_KEY                    0x7
+#define SET_PROPERTY_CMD_CAPTURE_CHANGE_PEOPLE          0x8
+#define SET_PROPERTY_CMD_FINGER_DETECT_TEST             0x9
+#define SET_PROPERTY_CMD_GET_IMG_BIT_WIDTH              0xA
+#define SET_PROPERTY_CMD_CTL_REPORT_DIRECTION_EVENT     0xB
+
+#define SET_PROPERTY_CMD_ALGO_BASE                      0x8000
+#define SET_PROPERTY_CMD_ALGO_TEMPLATE_SIZE             0x8001
+#define SET_PROPERTY_CMD_ALGO_ENROLL_SIZE               0x8002
+#define SET_PROPERTY_CMD_ALGO_IMAGE_PREDICT_RESULT      0x8003
+#define SET_PROPERTY_CMD_ALGO_FINGER_SAME_EREA_DETECT   0x8004
+
+// reserved return value
+#define ERROR_UNIMPLMENTED                              (-1)
+
+#endif

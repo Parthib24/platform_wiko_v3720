@@ -1,0 +1,32 @@
+# add for android fingerprintd
+allow fingerprintd kernel:system module_request;
+allow fingerprintd fuse:dir create_dir_perms;
+allow fingerprintd fuse:file create_file_perms;
+allow fingerprintd tmpfs:chr_file {open create read write};
+allow fingerprintd tmpfs:lnk_file {open create read write};
+allow fingerprintd tmpfs:dir {create search};
+allow fingerprintd storage_file:chr_file {read write};
+allow fingerprintd storage_file:lnk_file {read write};
+allow fingerprintd mnt_user_file:dir {search};
+allow fingerprintd mnt_user_file:lnk_file {read write};
+
+# Add for chipone fingerprint
+type fpsensor_fp_device, dev_type;
+type fpsensor_test_service,service_manager_type;
+allow fingerprintd fpsensor_fp_device:chr_file {open read write ioctl};
+allow untrusted_app fpsensor_fp_device:chr_file {open write read ioctl}; 
+
+# add for chipone fpsensor test socket connection
+binder_call(fingerprintd, untrusted_app);
+binder_call(untrusted_app, fingerprintd);
+allow fingerprintd system_data_file:dir {write read add_name remove_name};
+allow fingerprintd system_data_file:sock_file {create setattr unlink};
+allow system_app fingerprintd:unix_stream_socket {connectto read write};
+allow system_app fingerprintd:fd {use}; 
+allow system_app fpsensor_test_service:service_manager {add};
+
+# Navigator for /dev/uinput
+allow fingerprintd uhid_device:chr_file{open read write ioctl};
+
+allow system_server fpsensor_fp_device:chr_file {open read write ioctl};
+

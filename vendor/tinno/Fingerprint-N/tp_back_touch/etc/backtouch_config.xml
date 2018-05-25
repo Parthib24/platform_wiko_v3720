@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+        <setting name="feature_screen_on_open_camera" value="0"/>
+</resources>

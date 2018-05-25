@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BackTouch</string>
+
+    <!-- Switch On/Off  -->
+    <string name="switch_on_text">On</string>
+    <string name="switch_off_text">Off</string>
+
+    <!-- linzhiqin add for backtouch start -->
+    <string name="backtouch">Back touch</string>
+    <string name="back_touch_open_camera_title">Double-click to open the camera</string>
+    <string name="back_touch_open_camera_summary">When screen is off and the smart action is opened, double-click the touch area to open the camera</string>
+    <string name="zzz_back_touch_open_camera_summary">Double-click the touch area to open the camera, if the screen is off,you should open the smart action in advance</string>
+    <string name="back_touch_take_photos_title">Click the touch area to take photos</string>
+    <string name="back_touch_take_photos_summary">In the camera viewfinder interface, click touch area to take photos</string>
+    <string name="back_touch_change_screen_title">Long press the touch area to switch camera</string>
+    <string name="back_touch_change_screen_summary">In the camera viewfinder interface, long press the touch area to switch camera</string>
+    <string name="back_touch_call_title">Double-click to answer the call</string>
+    <string name="back_touch_call_summary">When an incoming call, double-click the touch area to answer the call</string>
+    <string name="smart_awake_title_opencamera">Open camera</string>
+    <string name="smart_awake_tutorial_opencamera">When screen is off, double-click to open the camera touch area.</string>
+    <!-- linzhiqin add for backtouch,end -->
+</resources>

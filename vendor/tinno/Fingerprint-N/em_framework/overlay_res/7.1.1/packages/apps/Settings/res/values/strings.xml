@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<string name="security_settings_fingerprint_enroll_disclaimer">In addition to unlocking your phone, you can also use your fingerprint to authorize     purchases and app access. </string>
+
+
+<string name="security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled">Screen lock option disabled. You can still use your fingerprint to     authorize purchases and app access. </string>
+
+<string name="zzz_security_settings_fingerprint_enroll_find_sensor_message">Locate the fingerprint sensor below the screen.</string>
+
+<string name="security_settings_fingerprint_enroll_introduction_message">Just touch the fingerprint sensor to unlock your phone, authorize purchases, or sign in to apps. Be careful whose fingerprints you add. Even one added print can do any of these things.\n\nNote: Your fingerprint may be less secure than a strong pattern, PIN, or password. <annotation id="url">Learn more</annotation></string>
+
+<string name="zzz_security_settings_fingerprint_enroll_find_back_sensor_message">Locate the fingerprint sensor on the back of the screen.</string>
+</resources>

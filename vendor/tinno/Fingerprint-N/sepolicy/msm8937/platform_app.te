@@ -1,0 +1,18 @@
+
+
+# ELAN
+allow platform_app elanfp_device:chr_file rw_file_perms;
+
+# Guomingyi 2016/03/27 add.
+# Package: com.ape.encryptmanager.service
+# Class : com.ape.encryptmanager.service.EncryptService
+allow platform_app EncryptService:service_manager find;
+
+#add by xiaowen
+allow platform_app fp_drv_tinno_device:chr_file rw_file_perms;
+allow platform_app property_socket:sock_file { write read };
+allow platform_app init:unix_stream_socket { connectto };
+
+
+
+

@@ -1,0 +1,12 @@
+
+
+# ELAN
+allow appdomain elanfp_device:chr_file rw_file_perms;
+
+# Goodix
+#allow access to gx_fpd fingerprintd
+allow system_app gx_fpd_data_file:dir create_dir_perms;
+allow system_app gx_fpd_data_file:file create_file_perms;
+binder_call(system_app, gx_fpd)
+
+

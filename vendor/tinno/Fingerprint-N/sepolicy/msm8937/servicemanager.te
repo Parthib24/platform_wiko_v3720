@@ -1,0 +1,5 @@
+
+allow servicemanager fingerprintd:dir search;
+allow servicemanager fingerprintd:file read;
+allow servicemanager fingerprintd:file open;
+allow servicemanager fingerprintd:process getattr;

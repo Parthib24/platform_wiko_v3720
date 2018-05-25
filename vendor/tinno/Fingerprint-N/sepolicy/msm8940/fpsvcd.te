@@ -1,0 +1,107 @@
+type fpsvcd_exec, exec_type, file_type;
+type fpsvcd, domain, mlstrustedsubject;
+init_daemon_domain(fpsvcd)
+
+allow fpsvcd fingerprintd:dir { open read  };
+allow fpsvcd fingerprintd:file { open read  };
+allow fpsvcd fpsvcd:capability { sys_nice dac_override net_raw net_admin setuid};
+allow fpsvcd fpsvcd:capability2 { block_suspend };
+allow fpsvcd fpsvcd:netlink_kobject_uevent_socket {create read write setopt bind };
+allow fpsvcd fpsvcd_data_file:dir { create write add_name remove_name read open search};
+allow fpsvcd fpsvcd_data_file:file {unlink getattr create write open read };
+allow fpsvcd fpsvcd_tmpfs:file { write create read open};
+allow fpsvcd fuse:dir { search rmdir open add_name remove_name read write create};
+allow fpsvcd fuse:file { append unlink open read write create getattr setattr rename};
+allow fpsvcd init_tmpfs:file {getattr read open};
+allow fpsvcd media_rw_data_file:dir { search open add_name remove_name read write create};
+allow fpsvcd media_rw_data_file:file { unlink open read write create getattr setattr rename};
+allow fpsvcd platform_app_tmpfs:file { open read write };
+#allow fpsvcd silead_data_file:dir { search create write add_name read open };
+#allow fpsvcd silead_data_file:file { create write open read getattr };
+allow fpsvcd silead_fp_dev_device:chr_file { read write ioctl open };
+allow fpsvcd tmpfs:dir { search read open write add_name };
+allow fpsvcd sysfs:file { open read write };
+allow fpsvcd sysfs_wake_lock:file {write read open};
+allow fpsvcd system_prop:property_service { set };
+allow fpsvcd system_app:dir { read open };
+allow fpsvcd system_app_tmpfs:file { read write open };
+#allow fpsvcd system_data_file:dir { create write add_name read open };
+#allow fpsvcd system_data_file:file { create write open read };
+allow fpsvcd system_file:dir {read open search getattr};
+allow fpsvcd system_file:file { read open getattr execute_no_trans};
+allow fpsvcd uhid_device:chr_file { write open ioctl};
+
+# Date: 2016/04/13
+# Operation: Fingerprint fix FpCloudTest.apk bug
+# Purpose: add for starting cloudtestsuited in apk
+#allow kernel mnt_user_file:dir { search read write};
+#allow kernel mnt_user_file:lnk_file { read write };
+#allow guiext-server aee_dumpsys_data_file:file {write};
+allow fpsvcd node:tcp_socket {node_bind};
+allow fpsvcd port:tcp_socket {name_connect name_bind};
+allow fpsvcd property_socket:sock_file { write };
+allow fpsvcd init:unix_stream_socket { connectto };
+allow fpsvcd fpsvcd:tcp_socket {connect create setopt write read bind listen accept};
+allow fpsvcd fwmarkd_socket:sock_file {write};
+allow fpsvcd netd:unix_stream_socket {connectto};
+allow fpsvcd storage_file:lnk_file {read};
+allow fpsvcd init:dir {getattr search};
+allow fpsvcd init:file {read open};
+allow fpsvcd kernel:dir {getattr search};
+allow fpsvcd kernel:file {open read};
+allow fpsvcd mnt_user_file:dir {search};
+allow fpsvcd mnt_user_file:lnk_file {read};
+allow fpsvcd ueventd:dir {getattr search};
+allow fpsvcd ueventd:file {read open};
+allow fpsvcd logd:dir {getattr search};
+allow fpsvcd logd:file {read open};
+allow fpsvcd vold:dir {getattr search};
+allow fpsvcd vold:file {read open};
+allow fpsvcd healthd:dir {getattr search};
+allow fpsvcd healthd:file {read open};
+allow fpsvcd lmkd:dir {getattr search};
+allow fpsvcd lmkd:file {read open};
+#allow fpsvcd pq:dir {getattr search};
+#allow fpsvcd pq:file {read open};
+allow fpsvcd servicemanager:dir {getattr search};
+allow fpsvcd servicemanager:file {create write open read getattr setattr};
+allow fpsvcd surfaceflinger:dir {getattr search};
+allow fpsvcd surfaceflinger:file {read open};
+allow fpsvcd shell_exec:file {execute read open execute_no_trans};
+allow netd fpsvcd:fd {use};
+allow netd fpsvcd:tcp_socket {read write getopt setopt };
+
+# Date: 2016/08/25
+# Operation: Fingerprint fix setScreenStatus bug
+# Purpose: allow fpsvcd to read brightness file
+# if on TEE OS and use 'ls -Z' cmd to find brightness file
+# is limit by 'sys_lcd_brightness_file', pls open next permission
+#allow fpsvcd sys_lcd_brightness_file:file { read open getattr };
+
+# Date: 2016/06/15
+# Operation: Fingerprint fix setScreenStatus bug
+# Purpose: allow fpsvcd to read surfaceflinger dir
+allow fpsvcd surfaceflinger:dir { read open };
+
+# Date: 2016/06/15
+# Operation: Fingerprint fix TEEOS bug
+# Purpose: allow TEEOS to read/write fpsvcd_data_file dir/files
+# remove the comments if the TeeOS is qsee
+allow tee fpsvcd_data_file:dir { create write add_name remove_name read open search rmdir getattr };
+allow tee fpsvcd_data_file:file { create write open read getattr setattr unlink };
+allow fpsvcd ion_device:chr_file { read write ioctl open getattr setattr};
+allow fpsvcd tee_device:chr_file { read write ioctl open getattr setattr};
+#allow fpsvcd qseeproxy:file { read write ioctl open getattr setattr};
+#allow fpsvcd qseeproxy:dir { write add_name remove_name read open search rmdir getattr };
+# Purpose: QSEE TEEOS to read firmware dir/files and use 'ls -Z' cmd to check context properties
+allow fpsvcd firmware_file:dir { search };
+allow fpsvcd firmware_file:file { read open getattr };
+#add for qsee end
+
+# Date: 2016/10/15
+# Operation: Fingerprint fix multipleUser bug on Android-6.0
+# Purpose: allow SystemUI to read/write xml under '/data/silead/' file path
+allow fpsvcd platform_app:dir { read open };
+allow fpsvcd fingerprintd_data_file:dir { create write add_name read open };
+allow fpsvcd fingerprintd_data_file:file { create write open read };
+

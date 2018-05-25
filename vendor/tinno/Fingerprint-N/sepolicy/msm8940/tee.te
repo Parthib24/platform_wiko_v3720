@@ -1,0 +1,3 @@
+allow tee gx_fpd_data_file:dir { open read write search getattr remove_name add_name };
+allow tee gx_fpd_data_file:file { read write open getattr create unlink };
+

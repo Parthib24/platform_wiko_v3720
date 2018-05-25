@@ -1,0 +1,7 @@
+
+# elan
+allow system_server elanfp_device:chr_file { read write open ioctl };
+
+
+# goodix
+allow system_server gx_fpd_device:chr_file { read write open ioctl };

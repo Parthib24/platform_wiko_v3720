@@ -1,0 +1,6 @@
+# ==============================================
+# TINNO Policy Rule
+# ==============================================
+persist.tinno.   u:object_r:tinno_prop:s0
+tinno.           u:object_r:tinno_prop:s0
+

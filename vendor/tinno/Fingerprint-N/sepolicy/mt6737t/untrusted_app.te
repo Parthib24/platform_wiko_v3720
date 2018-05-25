@@ -1,0 +1,21 @@
+
+# goodix.
+allow untrusted_app gx_fpd:dir { read getattr open search};
+allow untrusted_app gx_fpd:file { read getattr open };
+
+# silead
+#allow untrusted_app fpsvcd:dir { getattr search };
+#allow untrusted_app fpsvcd:file { read getattr open };
+
+# fingerprint.
+allow untrusted_app fingerprintd:dir { getattr search };
+allow untrusted_app fingerprintd:file { read getattr open };
+
+allow untrusted_app init:dir { getattr search };
+allow untrusted_app init:file { read getattr open };
+#allow untrusted_app su:dir { getattr search };
+#allow untrusted_app su:file { read getattr open };
+allow untrusted_app platform_app:dir { getattr search };
+allow untrusted_app platform_app:file { read getattr open };
+allow untrusted_app system_app:dir { getattr search };
+allow untrusted_app system_app:file { read getattr open };

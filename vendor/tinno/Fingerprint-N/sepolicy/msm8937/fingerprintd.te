@@ -1,0 +1,40 @@
+	
+# guomingyi add for fingerprint start.
+################################################################################
+allow fingerprintd servicemanager:binder call;
+allow fingerprintd servicemanager:binder transfer;
+
+# Goodix
+allow fingerprintd gx_fpd_service:service_manager find;
+binder_call(fingerprintd, gx_fpd);
+allow fingerprintd gx_fpd_lib_file:file r_file_perms;
+allow fingerprintd gx_fpd_lib_file:file { getattr read };
+allow fingerprintd gx_fpd_lib_file:chr_file { r_file_perms setattr };
+#for check consistence from framework xml
+binder_call(fingerprintd, system_server);
+allow fingerprintd permission_service:service_manager find;
+allow fingerprintd fingerprint_service:service_manager find;
+allow fingerprintd property_socket:sock_file write;
+allow fingerprintd init:unix_stream_socket connectto;
+allow fingerprintd system_prop:property_service set;
+allow fingerprintd property_socket:sock_file { write read };
+
+# elan
+allow fingerprintd elanfp_device:chr_file { read write open ioctl };
+allow fingerprintd tee_device:chr_file { open read write ioctl };
+allow fingerprintd firmware_file:dir { search open read };
+allow fingerprintd firmware_file:file { read open getattr };
+
+# silead
+#allow fingerprintd fpsvcd_tmpfs:file { read write open };
+#allow fingerprintd fpsvcd_tmpfs:dir { read write };
+#allow fingerprintd fingerprintd_exec:file { open read };
+#allow fingerprintd fpsvcd:dir { open read};
+#allow fingerprintd tmpfs:dir { read write add_name };
+#allow fingerprintd fingerprintd_tmpfs:file { create read write open };
+# silead 
+
+#TZ LOG
+allow fingerprintd fp_drv_tinno_device:chr_file { read write open ioctl };
+################################################################################
+# guomingyi add for fingerprint end.

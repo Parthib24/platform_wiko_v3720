@@ -1,0 +1,5 @@
+# zygote
+
+allow zygote tinno_prop:file { read getattr open };
+
+

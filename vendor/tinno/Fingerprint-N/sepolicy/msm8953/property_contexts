@@ -1,0 +1,7 @@
+# ==============================================
+# TINNO Policy Rule
+# 9051 driveronly
+# ==============================================
+goodix.fp.              u:object_r:system_prop:s0
+persist.tinno.fp.tz_log     u:object_r:system_prop:s0
+

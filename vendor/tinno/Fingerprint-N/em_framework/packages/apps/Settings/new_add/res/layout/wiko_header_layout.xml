@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wiko_header_layout_height"
+        android:gravity="center_vertical"
+    	android:background="@drawable/wiko_header_bg"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/header_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	    android:layout_marginLeft="20dip"
+	    android:src="@drawable/boot_guide_header_icon_pattern"
+	    />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+	     android:layout_marginLeft="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+		android:text="@string/set_pattern_unlock_title"
+		android:textColor="#2c2c2c"
+   		android:textSize="17sp" 
+		android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/header_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+		android:layout_marginTop="5dip"
+		android:text="@string/finger_draw_summary"
+		android:textColor="#757575"
+   		android:textSize="14sp" 
+		android:singleLine="true" />
+        </LinearLayout>
+</LinearLayout>
+

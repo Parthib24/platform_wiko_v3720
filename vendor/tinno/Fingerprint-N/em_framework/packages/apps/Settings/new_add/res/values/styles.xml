@@ -1,0 +1,67 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        
+         <style name="AppBaseTheme" parent="android:Theme.Light">
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+    </style>
+
+    <style name="app_name_theme">
+        <item name="android:textColor">#ff323232</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="finger_edit_dialog_theme" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+     </style>
+
+    <style name="finger_edit_dialog_item">
+         <item name="android:layout_width">fill_parent</item>
+         <item name="android:layout_height">50dp</item>
+         <item name="android:layout_gravity">center_vertical</item>
+         <item name="android:gravity">left</item>
+         <item name="android:paddingLeft">10dp</item>
+         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+         <item name="android:textColor">@android:color/black</item>
+     </style>
+
+     <style name="HoloLightSelectMode" parent="android:style/Widget.Material.Light.ListPopupWindow">
+        <item name="android:popupBackground">@null</item>
+    </style>
+
+        <style name="EncryptActionMode" parent="@android:style/Widget.Material.Light.ActionMode">
+        <item name="android:background">@color/primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:actionModeBackground">@color/primary</item>
+    </style>
+
+     <style name="EncryptTheme" parent="@android:style/Theme.Material.Light">
+           <item name="android:colorPrimary">@color/fingerprint_statusbar_color</item>
+           <item name="android:colorPrimaryDark">@color/fingerprint_statusbar_color</item>
+           <item name="android:textColorPrimary">@color/white</item>
+           <item name="android:textColor">@*android:color/primary_text_light</item>
+           <item name="android:actionBarWidgetTheme">@style/HoloLightSelectMode</item>
+           <item name="android:actionModeStyle">@style/EncryptActionMode</item>
+           <item name="android:actionBarSize">@dimen/atcionbar_size</item>
+           <item name="android:colorAccent">@color/style_category_color</item>
+           <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>

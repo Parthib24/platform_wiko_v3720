@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <add-resource type="color" name="system_warning_color_em" />
+    <color name="system_warning_color_em">#fff4511e</color>
+</resources>

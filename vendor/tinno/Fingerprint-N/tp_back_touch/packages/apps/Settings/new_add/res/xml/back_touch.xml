@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="back_touch"
+    android:defaultValue="true">
+
+    <CheckBoxPreference
+        android:key="back_touch_open_camera"
+        android:title="@string/back_touch_open_camera_title"
+        android:summary="@string/back_touch_open_camera_summary"
+	android:defaultValue="true"/>
+
+    <CheckBoxPreference
+        android:key="back_touch_take_photos"
+        android:title="@string/back_touch_take_photos_title"
+        android:summary="@string/back_touch_take_photos_summary"
+	android:defaultValue="true"/>
+
+    <CheckBoxPreference
+        android:key="back_touch_change_screen"
+        android:title="@string/back_touch_change_screen_title"
+        android:summary="@string/back_touch_change_screen_summary"
+	android:defaultValue="true"/>
+        
+    <CheckBoxPreference
+        android:key="back_touch_call"
+        android:title="@string/back_touch_call_title"
+        android:summary="@string/back_touch_call_summary"
+	android:defaultValue="true"/>
+
+</PreferenceScreen>

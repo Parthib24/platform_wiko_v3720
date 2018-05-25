@@ -1,0 +1,8 @@
+
+# goodix
+type gx_fpd_service, app_api_service, system_server_service, service_manager_type;
+
+# Guomingyi 2016/03/27 add.
+# Package: com.ape.encryptmanager.service
+# Class : com.ape.encryptmanager.service.EncryptService
+type EncryptService, service_manager_type;

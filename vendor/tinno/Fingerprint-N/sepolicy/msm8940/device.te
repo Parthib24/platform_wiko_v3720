@@ -1,0 +1,12 @@
+
+#add by silead begin
+type silead_fp_dev_device,dev_type;
+#add by silead end
+
+# ELAN
+type elanfp_device, dev_type;
+
+#For Goodix fingerprint
+type gx_fpd_device, dev_type;
+# TZ LOG
+type fp_drv_tinno_device, dev_type;

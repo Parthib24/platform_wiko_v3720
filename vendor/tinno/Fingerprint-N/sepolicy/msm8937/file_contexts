@@ -1,0 +1,46 @@
+
+
+# add by silead begin
+#add by silead begin
+#/dev/silead_fp_dev(/.*)?   u:object_r:silead_fp_dev_device:s0
+#/system/bin/fpsvcd u:object_r:fpsvcd_exec:s0
+#/system/bin/fpfslockd u:object_r:fpsvcd_exec:s0
+#/data/silead(/.*)?    	u:object_r:silead_data_file:s0
+# add by silead end
+
+# Goodix fingerprint
+/dev/gf66xx-spi     u:object_r:gx_fpd_device:s0
+/dev/ttyACM[0-9]*   u:object_r:gx_fpd_device:s0
+/dev/goodix_fp*     u:object_r:gx_fpd_device:s0
+
+/data/system/fingerprint(/.*)?    u:object_r:gx_fpd_data_file:s0
+/persist/data/gxfp(/.*)?	  u:object_r:gx_fpd_data_file:s0
+
+
+/system/bin/gx_fpd                u:object_r:gx_fpd_exec:s0
+#/system/lib/libfp_client.so       u:object_r:gx_fp_lib_file:s0
+#/system/lib/libalgoandroid.so             			u:object_r:gx_fpd_lib_file:s0
+#/system/lib/hw/gxfingerprint.default.so   			u:object_r:gx_fpd_lib_file:s0
+#/system/lib/hw/fingerprint.goodix.default.so    	u:object_r:gx_fpd_lib_file:s0
+#/system/lib/libfpservice.so       u:object_r:gx_fpd_lib_file:s0
+#/system/lib/libfpalgorithm.so     u:object_r:gx_fpd_lib_file:s0
+#/system/lib/libfphal.so           u:object_r:gx_fpd_lib_file:s0
+#/system/lib64/libfp_client.so     u:object_r:gx_fp_lib_file:s0
+#/system/lib64/libfpservice.so     u:object_r:gx_fpd_lib_file:s0
+#/system/lib64/libfpalgorithm.so   u:object_r:gx_fpd_lib_file:s0
+#/system/lib64/libfphal.so         u:object_r:gx_fpd_lib_file:s0
+# Goodix fingerprint
+
+# Fingerprint data
+#/data/system/users/[0-9]+/fpdata(/.*)? u:object_r:fingerprintd_data_file:s0
+
+# ELAN
+/dev/elan_fp u:object_r:elanfp_device:s0
+# ELAN
+# goodix
+/dev/goodix_fp                 u:object_r:goodixfingerprintd_device:s0
+
+#TZ LOG
+/dev/fp_drv  u:object_r:fp_drv_tinno_device:s0
+
+

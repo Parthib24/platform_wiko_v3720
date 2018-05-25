@@ -1,0 +1,4 @@
+allow system_server tinno_prop:file open;
+allow system_server tinno_prop:file read;
+allow system_server tinno_prop:file getattr;
+

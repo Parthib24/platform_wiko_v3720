@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+            android:id="@+id/key_back_home_recent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/dashboard_tile_background"
+            android:layout_marginTop="8dp"
+             android:gravity="center_vertical"
+         >
+
+        <RadioButton
+            android:id="@+id/key_back_home_recent_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+             />
+
+        <ImageView
+            android:id="@+id/key_back_home_recent_tv"
+	        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zzz_back_home_recent" 
+            android:layout_toRightOf="@id/key_back_home_recent_rb"
+            android:layout_marginLeft="16dp"
+         />
+
+    </RelativeLayout>
+
+    <!--<View style="@style/mssd_view_style"/>-->
+        
+    <RelativeLayout
+        android:id="@+id/key_recent_home_back"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/dashboard_tile_background"
+        android:gravity="center_vertical" >
+
+        <RadioButton
+            android:id="@+id/key_recent_home_back_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/key_recent_home_back_tv"
+            android:src="@drawable/zzz_recent_home_back" 
+	        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/key_recent_home_back_rb"
+            android:layout_marginLeft="16dp"
+
+            />
+
+    </RelativeLayout>
+   
+        
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="18.0dp"
+        android:text="@string/quick_boot_contacts" />
+
+    <com.ape.encryptmanager.quicksearch.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/search"
+        android:background="@null"
+        android:hint="请输入关键字"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="15.0dip"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="@drawable/search_bar_icon_normal" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+# Date : 2016/06/01
+# Operation: TEEI integration
+# Purpose: Microtrust teei_daemon service
+
+#add by tinno
+allow teei_daemon sysfs:file { read open};

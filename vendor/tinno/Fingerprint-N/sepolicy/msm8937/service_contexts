@@ -1,0 +1,18 @@
+
+#fingerprint                               u:object_r:fingerprint_service:s0
+#android.hardware.fingerprint.IFingerprintDaemon u:object_r:fingerprintd_service:s0
+
+# guomingyi add for fingerprint.
+elanfp 		u:object_r:fingerprintd_service:s0
+goodix.fp       u:object_r:gx_fpd_service:s0
+# guomingyi add for fingerprint.
+
+# Guomingyi 2016/03/27 add.
+# Package: com.ape.encryptmanager.service
+# Class : com.ape.encryptmanager.service.EncryptService
+EncryptService  u:object_r:EncryptService:s0
+
+
+# lipeng add for GoodixFingerprint
+android.hardware.fingerprint.IGoodixFingerprintDaemon u:object_r:goodixfingerprintd_service:s0
+com.goodix.FingerprintService u:object_r:goodix_fingerprint_service:s0

@@ -1,0 +1,11 @@
+<resources>
+ <dimen name="wiko_header_layout_height">165px</dimen>
+     <dimen name="wiko_finger_pin_title_margintop">33px</dimen>
+     <dimen name="wiko_applock_keypad_display_margintop">18px</dimen>
+ <dimen name="wiko_applock_pin_number_layout_margintop">10px</dimen>
+     <dimen name="headerText_number_margintop">97px</dimen>
+     <dimen name="applock_keypad_display_margintop">52px</dimen>
+ <dimen name="applock_keypad_display_layout__height">27px</dimen>
+<dimen name="applock_button_next_layout__height">81px</dimen>
+<dimen name="header_Layout_height_margintop">162px</dimen>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Cap Jari</string>
+    <string name="fingerprint_gategory">tetapan cap jari</string>
+    <string name="navigation_category">kawalan navigasi</string>
+    <string name="fingerprint_settings_title">Fingerprint</string>
+    <string name="fingerprint_title">Cap Jari</string>
+    <string name="fingerprint_summary">5 cap jari menubuhkan</string>
+    <string name="app_and_file_lock_title">Aplikasi  &#038; kunci fail </string>
+    <string name="file_lock_title">Kunci fail </string>
+    <string name="app_and_file_lock_summary">Menyediakan jari</string>
+    <string name="quick_boot_title">Tindakan pantas</string>
+    <string name="quick_boot_summary">Tetapkan tindakan pantas saya</string>
+    <string name="sensor_button_title">Butang penderia </string>
+    <string name="sensor_button_summary">Menyentuh kembali</string>
+    <string name="quick_action_activity_title">"Tindakan pantas"</string>
+    <string name="quick_action_activity_sub_title">"Tetapan saya"</string>
+    <string name="quick_action_dialog_default_title">"Jari"</string>
+    <string name="quick_action_dialog_title">Jari%1$d</string>
+    <string name="quick_action_dialog_app_item_str">"Pautan permohonan untuk membuka"</string>
+    <string name="quick_action_dialog_contact_item_str">"Pautkan kenalan untuk memanggil"</string>
+    <string name="quick_action_dialog_unlock_item_str">"Membuka kunci skrin sahaja"</string>
+    <string name="quick_action_finger_no_function">"Membuka kunci skrin"</string>
+    <string name="quick_boot_application">Pilih aplikasin</string>
+
+    <string name="screen_unlock_fingerprint_mach_error">Cap jari tidak sepadan, sila cuba lagi.</string>
+
+    <string name="screen_unlock_fingerprint_mach_error_mmxin">Please scan again.</string>
+
+    <string name="screen_unlock_fingerprint_mach_some_seconds_later">pengesahan cap jari gagal, sila cuba lagi dalam %2d saat atau menggunakan cara lain untuk membuka kunci.</string>
+    <string name="quick_boot_contacts">Pilih kenalan</string>
+
+    <string name="finger_toast_tip_fingername_empty">Nama anda kosong </string>
+    <string name="finger_toast_tip_fingername_repet">Nama anda digunakan </string>
+    <string name="finger_toast_tip_fingerdata_empty">Cetakan jari anda kosong </string>
+    <string name="finger_toast_tip_fingerdata_repet">Cap jari anda sudah wujud</string>
+    <string name="finger_choice_create_finger">Cap jari baru</string>
+    <string name="finger_toast_tip_fingername_cannot_empty">Nama cap jari tidak boleh kosong</string>
+
+    <string name="finger_for_screen_lock">Kunci Skrin </string>
+    <string name="finger_for_privacy_lock">Kunci Privasi </string>
+    <string name="finger_no_function">Fungsi tidak ditentukan</string>
+
+    <string name="finger_my_setting">Tetapan Saya</string>
+    <string name="change_password">Tukar corak keselamatan</string>
+    <string name="change_potection">Soalan tukar keselamatan</string>
+
+    <string name="set_encrypt_activity_name">Set kata laluan</string>
+    <string name="parrern_reset_title">Set semula</string>
+    <string name="confirm_number_encrypt">"Sahkan kata laluan digital"</string>
+    <string name="make_number_password_title">Menggunakan kata laluan digital </string>
+    <string name="set_pattern_title">Lukisan corak kunci privasi</string>
+    <string name="set_pattern_title_main">Kata laluan Set gerak isyarat</string>
+
+    <string name="make_pattern_password_title">Menggunakan kata laluan corak </string>
+    <string name="set_number_title_main">Tetapkan kata laluan digital</string>
+    <string name="release_finger_title">Lepaskan jari anda selepas tamat</string>
+    <string name="lockpattern_need_to_unlock">"Melukis corak kunci privasi sekali lagi"</string>
+    <string name="confirm_encrypt">"Sahkan kata laluan"</string>
+    <string name="lockpattern_check_error">"Corak input berganda tidak selaras. "</string>
+    <string name="password_potection_activity_name">Menyediakan soalan keselamatan </string>
+    <string name="secure_dialog_title">Soalan keselamatan</string>
+    <string name="secure_dialog_ok">OK</string>
+    <string name="secure_dialog_cancel">batal</string>
+    <string name="question_password_title">Lupakan gerak isyarat atau kata laluan, membetulkan semula oleh soalan keselamatan</string>
+    <string name="question_password_hint">Sila memasuki jawapan (sehingga 20 ciri) </string>
+    <string name="complete">Selesai </string>
+
+    <string name="finger_enroll_step">Seterusnya </string>
+    <string name="setting_success">Menetapkan berjaya</string>
+    <string name="check_password_null">Anda tidak memasukkan jawapan </string>
+    <string name="answer_password_question">Jawapan soalan keselamatan</string>
+    <string name="check_password_error">Pengesahan gagal, sila input lagi.</string>
+    <string name="question_password_hint_sub">Sila masukkan jawapan</string>
+
+    <string name="fingerprint_check_success">Pengesahan cap jari berjaya !</string>
+    <string name="fingerprint_check_fail">Pengesahan cap jari gagal !</string>
+    <string name="fingerprint_error">Ralat cap jari !</string>
+    <string name="check_title">Penyahsulitan dan Pengesahan </string>
+    <string name="lockpattern_input_error">"Tidak Betul  (Anda boleh cuba  %d kali)"</string>
+    <string name="pattern_check_number_too_much">Mengesahkan jumlah terlalu banyak! </string>
+    <string name="check_pattern_title_sub">Kata laluan privasi </string>
+
+    <string name="check_pattern_title">Kata laluan atau cap jari </string>
+    <string name="fingerprint_bottom_hint_android_m_ver">Sentuh pengimbas cap jari untuk membuka kunci.</string>
+    <string name="fprget_password_menu">Terlupa kata laluan anda</string>
+    <string name="switch_on">Buka</string>
+    <string name="switch_off">Tutup</string>
+    <string name="finger_ed_delete_tips">Selepas memadam, menentukan fungsi cap jari tidak boleh didapati, mengesahkan untuk memadamkan ? </string>
+    <string name="finger_ed_delete_title">Padam</string>
+
+    <string name="set_pattern_unlock_title">Menyediakan satu membuka corak </string>
+    <string name="finger_draw_summary">Guna jari anda untuk lukis</string>
+    <string name="set_pin_unlock_title">Taip kod PIN</string>
+    <string name="finger_pin_summary">Menggunakan papan kekunci untuk menetapkan</string>
+    <string name="back_button">Undur </string>
+    <string name="next_button">seterusnya </string>
+
+    <string name="chang_pin_code">Guna &amp;kod pin </string>
+    <string name="chang_pattern">Guna &amp;buka kunci corak </string>
+    <string name="pin_type_title_show">PIN anda mesti guna sekurang-kurangnya 4 ciri </string>
+    <string name="lockpattern_too_short">Menyambung titik sekurang-kurangnya 4, cuba lagi</string>
+    <string name="release_finger_when_done">Lepaskan jari apabila selesai</string>
+    <string name="confirm_your_pattern">Sahkan corak anda</string>
+    <string name="confirm_your_pin">Sahkan kod PIN anda </string>
+
+    <string name="patterns_not_match">Corak tidak sepadan, cuba lagi </string>
+    <string name="pin_not_match">Pin tidak sepadan, cuba lagi </string>
+    <string name="apps_lock_title">Konfigurasi kunci aplikasi</string>
+    <string name="set_secure_question">Menyediakan satu soalan selamat </string>
+    <string name="set_secure_question_summary">Dapatkan semula kata laluan anda jika hilang </string>
+    <string name="enter_the_answer">Masukkan jawapan </string>
+    <string name="well_done">Syabas!</string>
+    <string name="now_set">Anda kini sudah bersedia!</string>
+
+    <string name="navigation_bar_display">Paparan bar navigasi</string>
+    <string name="navigation_bar_type">Bar navigasi</string>
+    <!--<string name="navigation_default">Default</string>
+    <string name="navigation_overturn">Overturn</string>-->
+
+    <string name="security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled">Pilihan kunci skrin dilumpuhkan. Anda masih boleh menggunakan cap jari untuk membenarkan pembelian dan akses apl. </string>
+    <string name="security_settings_fingerprint_enroll_disclaimer">Selain membuka kunci telefon anda, anda boleh menggunakan cap jari untuk membenarkan pembelian dan akses apl juga.</string>
+    <string name="security_settings_fingerprint_enroll_disclaimer_no_payment">Selain membuka kunci telefon anda, anda boleh menggunakan cap jari untuk membenarkan pembelian dan akses apl juga.</string>
+
+    <string name="fingerprint_settings_ed_title">Tetapan</string>
+    <string name="fingerprint_settings_ed_delete">Padam</string>
+    <string name="fingerprint_settings_ed_ok">OK</string>
+
+    <string name="secure_question_father_name">Nama bapa kamu?</string>
+    <string name="secure_question_mother_name">Nama ibu kamu?</string>
+    <string name="secure_question_juniorschool_name">Apakah nama sekolah rendah kamu?</string>
+    <string name="secure_question_seniorschool_name">Apakah nama sekolah menengah kamu?</string>
+    <string name="secure_question_movie_name">Filem kegemaran kamu?</string>
+
+</resources>

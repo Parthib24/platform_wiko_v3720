@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="finger_list_margin_left">16dp</dimen>
+    <dimen name="finger_list_margin_right">16dp</dimen>
+    <dimen name="main_menu_item_w">60dp</dimen>
+    <dimen name="main_menu_item_h">60dp</dimen>
+    <dimen name="main_menu_item_gap">45dp</dimen>
+    <dimen name="main_menu_item_top_gap">20dp</dimen>
+    <dimen name="item_text_top_gap">10dp</dimen>
+    <dimen name="atcionbar_size">48dp</dimen>
+
+
+   <dimen name="style_title_text_size">14sp</dimen>
+   <dimen name="style_category_text_size">13sp</dimen>
+   <dimen name="style_preference_name_text_size">16sp</dimen> 
+   <dimen name="style_preference_summary_text_size">14sp</dimen>
+   <dimen name="style_dialog_title_text_size">16sp</dimen>
+   <dimen name="style_dialog_item_text_size">16sp</dimen>
+   <dimen name="style_dialog_button_left_text_size">16sp</dimen>
+   <dimen name="style_dialog_button_right_text_size">16sp</dimen>
+
+  <!--  UI 2.0-->
+
+   <dimen name="layout_right_margin_gap">16dp</dimen>
+   <dimen name="layout_left_margin_gap">16dp</dimen>
+   <dimen name="layout_left_margin_gap_wiko">12dp</dimen>
+   
+   <dimen name="layout_quick_right_margin_gap">25dp</dimen>
+   <dimen name="layout_quick_left_margin_gap">25dp</dimen>
+   
+   <dimen name="layout_Top_margin_gap">15dp</dimen>
+   <dimen name="layout_Bottom_margin_gap">15dp</dimen>
+
+   <dimen name="layout_category_Top_margin_gap">6dp</dimen>
+   <dimen name="layout_category_Bottom_margin_gap">0dp</dimen>
+
+   <dimen name="layout_category_Top_margin_gap_wiko">14dp</dimen>
+   <dimen name="layout_category_Bottom_margin_gap_wiko">14dp</dimen>   
+
+    <dimen name="layout_item_indoor_margin_gap">5dp</dimen>
+
+    <!-- Height of the floating action button -->
+    <dimen name="floating_action_button_height">56dp</dimen>
+    <!-- Width of the floating action button -->
+    <dimen name="floating_action_button_width">56dp</dimen>
+    <!-- Right margin of the floating action button -->
+    <dimen name="floating_action_button_margin_right">16dp</dimen>
+    <!-- Bottom margin of the floating action button -->
+    <dimen name="floating_action_button_margin_bottom">16dp</dimen>
+
+
+     <dimen name="quick_action_image_view_width">40dp</dimen>
+     <dimen name="quick_action_image_view_height">40dp</dimen>
+ 
+
+
+
+     <dimen name="wiko_header_layout_height">110dip</dimen>
+     <dimen name="wiko_finger_pin_title_margintop">22dip</dimen>
+     <dimen name="wiko_applock_keypad_display_margintop">12dip</dimen>
+     <dimen name="wiko_applock_pin_number_layout_margintop">7dip</dimen>
+
+     <dimen name="headerText_number_margintop">65dip</dimen>
+     <dimen name="applock_keypad_display_margintop">35dip</dimen>
+     <dimen name="applock_keypad_display_layout__height">18dip</dimen>
+      <dimen name="applock_button_next_layout__height">54dip</dimen>
+
+     <dimen name="header_Layout_height_margintop">108dip</dimen>
+
+</resources>

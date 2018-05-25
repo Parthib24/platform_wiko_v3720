@@ -1,0 +1,84 @@
+#===========================================================================
+#  Copyright (c) 2011-2016 QUALCOMM Incorporated.
+#  All Rights Reserved.
+#  Qualcomm Confidential and Proprietary
+#===========================================================================
+#
+#
+# GENERAL DESCRIPTION
+#    build script
+#                      EDIT HISTORY FOR FILE
+#
+#  This section contains comments describing changes made to the module.
+#  Notice that changes are listed in reverse chronological order.
+#
+# when       who     what, where, why
+# --------   ---     ---------------------------------------------------------
+#
+#===============================================================================
+#-------------------------------------------------------------------------------
+# Source PATH
+#-------------------------------------------------------------------------------
+Import('env')
+
+if env.has_key('USES_NO_CP'):
+  env.Append(CCFLAGS = ' -DUSES_NO_CP ')
+
+env.Append(CPPDEFINES = 'SILEAD_APP=1')
+
+env.Append(LINKFLAGS = "--wrap perror ");
+env.Append(LINKFLAGS = "--wrap __errno ");
+env.Append(LINKFLAGS = "--wrap assert ");
+env.Append(LINKFLAGS = "--wrap __assert_func ");
+env.Append(LINKFLAGS = "--wrap gettid ");
+
+includes = [
+            '#../../core/api/securemsm/trustzone/qsee',
+           ]
+
+env.Append(SRC_PATH = '${BUILD_ROOT}/core/securemsm/trustzone/qsapps/fpsilead/src')
+
+#----------------------------------------------------------------------------
+# App core Objects
+#----------------------------------------------------------------------------   
+sources = [
+        '../src/tbasewrapper.c',
+    ]
+
+target_name = 'fpsilead'
+app_name = 'fingerprint'
+
+#------------------------------------------------------------------------------- 
+# Add metadata to image
+#-------------------------------------------------------------------------------
+md = {
+   'appName':    app_name,
+   'privileges': ['default',
+                  'I2C',
+                  'OEMUnwrapKeys',
+                  'CertValidate',
+                  'SPI',
+                  'TLMM',
+                  'SecureDisplay',
+                  'IntMask',
+                  'OEMBuf',
+                  'TransNSAddr',
+                 ],
+}
+if env['PROC'] == 'scorpion':
+  md['memoryType'] = 'Unprotected'
+
+silead_units = env.SecureAppBuilder(
+  sources = sources,
+  includes = includes,
+  metadata = md,
+  image = target_name,
+  stack_size = '0x200000', 
+  heap_size = '0x500000',
+  user_libs = [env.File('../silead_lib/lib/libfpsvcd_ta_libs.a'), 
+			    ],
+)
+
+# 
+for image in env['IMAGE_ALIASES']:
+  op = env.Alias(image, silead_units)

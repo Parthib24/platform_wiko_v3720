@@ -1,0 +1,109 @@
+#===========================================================================
+#  Copyright (c) 2011-2016 QUALCOMM Incorporated.
+#  All Rights Reserved.
+#  Qualcomm Confidential and Proprietary
+#===========================================================================
+#
+#
+# GENERAL DESCRIPTION
+#    build script
+#                      EDIT HISTORY FOR FILE
+#
+#  This section contains comments describing changes made to the module.
+#  Notice that changes are listed in reverse chronological order.
+#
+# when       who     what, where, why
+# --------   ---     ---------------------------------------------------------
+#
+#===============================================================================
+
+#-------------------------------------------------------------------------------
+# Source PATH
+#-------------------------------------------------------------------------------
+Import('env')
+
+if env.has_key('USES_NO_CP'):
+  env.Append(CCFLAGS = ' -DUSES_NO_CP ')
+
+env.Append(CPPDEFINES = 'FINGER_APP=1')
+
+env.Append(CCFLAGS = " -DFP_TEE_QSEE4=1")
+env.Append(CCFLAGS = " -DFEATURE_SEC_PAY=1 ")
+env.Append(CCFLAGS = " -DFEATURE_TEE_STORAGE=1 ")
+env.Append(CCFLAGS = " -DFEATURE_TEE_HW_AUTH=1 ")
+
+includes = [
+            '#../../core/api/kernel/libstd/stringl',
+            '#../../core/api/securemsm/trustzone/gp',
+            '#../../core/securemsm/trustzone/qsapps/libs/biometric/inc',
+            '#../../core/securemsm/trustzone/qsapps/fngap64/src',
+            '#../../core/securemsm/trustzone/qsapps/fngap64/src/public',
+            '#../../core/securemsm/trustzone/qsapps/fngap64/src/platform/qsee',
+            '#../../core/securemsm/trustzone/qsapps/fngap64/src/platform/qsee/fp_qsee_inc',
+           ]
+
+env.Append(SRC_PATH='${BUILD_ROOT}/core/securemsm/trustzone/qsapps/fngap64/src')
+
+#----------------------------------------------------------------------------
+# App core Objects
+#----------------------------------------------------------------------------
+sources = [
+	'platform/qsee/app_main.c',
+    'platform/qsee/fp_qsee_base.c',
+    'platform/qsee/fp_qsee_malloc.c',
+    'platform/qsee/fp_qsee_fts.c',
+    'platform/qsee/fp_qsee_hw_auth.c',
+    'platform/qsee/fp_qsee_sec_pay.c',
+    'platform/qsee/fp_qsee_spi.c',
+    'platform/qsee/COEMUnwrapKeys.c',
+    'fp_ta_config_qsee.c',
+]
+
+if env.has_key('USES_NO_CP'):
+  sources.extend(
+       ['app_content_protection_noship.c',
+        'cp_utils.c',
+       ]
+  )
+
+# we recommand use fngap64 TA
+if env['PROC'] == 'scorpion':
+  target_name = 'fngap32'
+  app_name = 'fingerprint'
+else:
+  target_name = 'fngap64'
+  app_name = 'fingerprint'
+
+#-------------------------------------------------------------------------------
+# Add metadata to image
+#-------------------------------------------------------------------------------
+md = {
+   'appName':    app_name,
+   'privileges': ['default',
+                  'I2C',
+                  'OEMUnwrapKeys',
+                  'CertValidate',
+                  'SPI',
+                  'TLMM',
+                  'SecureDisplay',
+                  'IntMask',
+                  'OEMBuf',
+                  'TransNSAddr',
+                 ],
+}
+if env['PROC'] == 'scorpion':
+  md['memoryType'] = 'Unprotected'
+
+fingerprint_units = env.SecureAppBuilder(
+  sources = sources,
+  includes = includes,
+  metadata = md,
+  image = target_name,
+  stack_size = '0x200000',
+  heap_size = '0xA00000',
+  user_libs = [env.File('lib/libfp_ta_qsee.a'), ],
+)
+
+for image in env['IMAGE_ALIASES']:
+  op = env.Alias(image, fingerprint_units)
+

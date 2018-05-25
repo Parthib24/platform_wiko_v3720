@@ -1,0 +1,11 @@
+# Add by silead begin
+# Operation : FingerPrint
+# Purpose : enable FingerPrint device for identify
+#allow init shell_data_file:file { create read write open};
+#allow init shell_data_file:dir { create add_name read write mounton};
+allow init tmpfs:file { read write open };
+allow init tmpfs:dir { read write mounton };
+allow init fpsvcd_exec:file {getattr open read execute };
+allow init fpsvcd_data_file:dir { create write add_name read open };
+allow init fpsvcd_data_file:file { create write open read };
+# Add by silead end

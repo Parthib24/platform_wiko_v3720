@@ -1,0 +1,58 @@
+
+# guomingyi add for fingerprint start.
+################################################################################
+allow factory kmsg_device:chr_file { read write ioctl open };
+
+
+allow fingerprintd servicemanager:binder call;
+allow fingerprintd servicemanager:binder transfer;
+allow fingerprintd property_socket:sock_file { write read };
+allow fingerprintd init:unix_stream_socket connectto;
+allow fingerprintd system_prop:property_service set;
+
+# Goodix
+allow fingerprintd gx_fpd_service:service_manager find;
+binder_call(fingerprintd, gx_fpd);
+allow fingerprintd gx_fpd_lib_file:file r_file_perms;
+allow fingerprintd gx_fpd_lib_file:file { getattr read };
+allow fingerprintd gx_fpd_lib_file:chr_file { r_file_perms setattr };
+#for check consistence from framework xml
+binder_call(fingerprintd, system_server);
+allow fingerprintd permission_service:service_manager find;
+allow fingerprintd fingerprint_service:service_manager find;
+
+# elan
+allow fingerprintd elanfp_device:chr_file { read write open ioctl };
+allow fingerprintd teei_fp_device:chr_file { read write open ioctl };
+allow fingerprintd kmsg_device:chr_file { read write open ioctl };
+
+# Add by sileadinc begin
+#allow fingerprintd fpsvcd_exec:file { getattr open read execute };
+allow fingerprintd fpsvcd_tmpfs:file { read write open };
+allow fingerprintd fpsvcd_tmpfs:dir { read write };
+allow fingerprintd fpsvcd:dir { open read };
+allow fingerprintd fpsvcd:file { open read };
+allow fingerprintd fingerprintd_exec:file { open read };
+
+# Date: 2016/09/25
+# Operation: Fingerprint fix fpsvcd_remoteApi bug
+# Purpose: allow fpsvcd_remoteApi to read fp file
+allow fingerprintd system_app:dir { read open };
+
+# Date: 2016/10/25
+# Operation: Fingerprint fix fpsvcd_remoteApi bug
+# Purpose: allow read/write xml files under '/data/silead/' directory
+allow fingerprintd fpsvcd_data_file:dir { search read write open remove_name add_name rmdir };
+allow fingerprintd fpsvcd_data_file:file { open read write create getattr unlink };
+
+# Date: 2016/12/15
+# Operation: Fingerprint fix multipleUser bug on Android-6.0
+# Purpose: allow fingerprintd to read xml under '/data/system/users/userlist.xml'
+allow fingerprintd system_data_file:file { read open };
+# Add by sileadinc end
+
+# Chipone
+allow fingerprintd system_data_file:dir { create open read write };
+
+################################################################################
+# guomingyi add for fingerprint end.

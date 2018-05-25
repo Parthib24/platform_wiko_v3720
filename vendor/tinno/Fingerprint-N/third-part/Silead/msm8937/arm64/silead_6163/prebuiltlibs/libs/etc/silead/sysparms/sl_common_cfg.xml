@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device name="com_config" dev_ver="0x61">
+
+    <SysParam> 
+		<SLFSLock>
+			<sysparm_on>1</sysparm_on>
+			<OnOff>1</OnOff>
+			<MaxEntries>100</MaxEntries>
+			<FSLock_BackupFolder>/data/silead/fslockbackup</FSLock_BackupFolder>
+			<FSLock_WatchFile>/data/silead/fslockwatchers.txt</FSLock_WatchFile>
+			<Picture_Format>bmp|jpg|jpeg|gif|png|tiff|tif</Picture_Format>
+			<Video_Format>rmvb|asf|ts|flv|mp4|mkv|avi|3gp|wmv|mov</Video_Format>
+			<Audio_Format>mp3|aac|wav|wma|m4a|mid|mka|ape|ogg|amr</Audio_Format>
+
+		</SLFSLock>
+        <SLVirTualID>
+			<VirTualID>0</VirTualID>
+            <!--MTK-6161e>0</6161e-MTK-->
+            <!--MTK-6163e>0</6163e-MTK-->
+            <!--MTK-6163s>0</6163s-MTK-->
+            <!--MTK-6263e>2</6263e-MTK-->
+            <!--MTK-6263s>3</6263s-MTK-->
+            <!--MTK-6172e>0</6172e-MTK-->
+            <!--MTK-6172s>1</6172s-MTK-->
+            <!--MTK-6272e>2</6272e-MTK-->
+            <!--MTK-6272s>3</6272s-MTK-->
+            <!--MTK-6182e>0</6182e-MTK-->
+            <!--MTK-6185e>0</6185e-MTK-->
+            <!--MTK-6182e96>0</6182e96-MTK-->
+		</SLVirTualID>
+        <SLMaskChipID>
+            <SLMaskID>FFFFFFFF_FFFFFF00_FFFFFFFF</SLMaskID>
+            <!--MTK-6161e>FFFFFFFF_FFFFFF00_FFFFFFFF</6161e-MTK-->
+            <!--MTK-6163e>FFFFFFFF_FFFFFF00_FFFFFFFF</6163e-MTK-->
+            <!--MTK-6163s>FFFFFFFF_FFFFFF00_FFFFFFFF</6163s-MTK-->
+            <!--MTK-6263e>FFFFFFFF_FFFFFF00_FFFFFFFF</6263e-MTK-->
+            <!--MTK-6263s>FFFFFFFF_FFFFFF00_FFFFFFFF</6263s-MTK-->
+            <!--MTK-6172e>FFFFFFFF_FFFFFF00_FFFFFFFF</6172e-MTK-->
+            <!--MTK-6172s>FFFFFFFF_FFFFFF00_FFFFFFFF</6172s-MTK-->
+            <!--MTK-6272e>FFFFFFFF_FFFFFF00_FFFFFFFF</6272e-MTK-->
+            <!--MTK-6272s>FFFFFFFF_FFFFFF00_FFFFFFFF</6272s-MTK-->
+            <!--MTK-6182e>FFFFFFFF_FFFFFF00_FFFFFFFF</6182e-MTK-->
+            <!--MTK-6185e>FFFFFF00_FFFFFF00_FFFFFFFF</6185e-MTK-->
+            <!--MTK-6182e96>FFFFFF00_FFFFFF00_FFFFFFFF</6182e96-MTK-->
+        </SLMaskChipID>
+		<CloudTestSuite>
+			<!--vendor = 0 is ree-->
+			<!--vendor = 1 is tbase-->
+			<!--vendor = 2 is qsee-->
+			<vendor>0</vendor>
+		</CloudTestSuite>
+        <SLFPFPSVCRX>
+           <backlight_node_path>/sys/class/leds/lcd-backlight/brightness</backlight_node_path>
+        </SLFPFPSVCRX>
+        <SLFPQSEE>
+           <!--ta_dir>/system/vendor/firmware</ta_dir-->
+            <ta_dir>/firmware/image</ta_dir>
+        </SLFPQSEE>
+	</SysParam>
+
+</device>

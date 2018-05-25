@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<string name="app_name">Fingerprint</string>
+
+<string name="fingerprint_gategory">Fingerprint settings</string>
+<string name="navigation_category">Navigation controls</string>
+
+<string name="fingerprint_settings_title">Fingerprint</string>	
+<string name="fingerprint_title">Fingerprint</string>	
+<string name="fingerprint_summary">5 fingerprint set up</string>
+
+<string name="app_and_file_lock_title">App &#038; files lock</string>
+<string name="file_lock_title">Files lock</string>
+<string name="app_and_file_lock_summary">Set fingers</string>
+
+<string name="quick_boot_title">Quick actions</string>
+<string name="quick_boot_summary">Set my quick actions</string>
+
+<string name="sensor_button_title">Sensor button</string>
+<string name="sensor_button_summary">Touch to go back</string>
+
+<string name="quick_action_activity_title">"Quick actions"</string>
+<string name="quick_action_activity_sub_title">"My Settings"</string>
+<string name="quick_action_dialog_default_title">"Finger"</string>
+<string name="quick_action_dialog_title">Finger%1$d</string>
+<string name="quick_action_dialog_app_item_str">"Link an application to open"</string>
+<string name="quick_action_dialog_contact_item_str">"Link a contact to call"</string>
+<string name="quick_action_dialog_app_item_str_pk">"Set an application to open"</string>
+<string name="quick_action_dialog_contact_item_str_pk">"Set a contact to call"</string>
+
+<string name="quick_action_dialog_unlock_item_str">"Unlock screen only"</string>
+<string name="quick_action_finger_no_function">"Unlock Screen"</string>
+<string name="quick_boot_application">Select a quick action</string>
+
+<string name="screen_unlock_fingerprint_mach_error">Fingerprint doesn\'t match, please try again.</string>
+   <string name="screen_unlock_fingerprint_mach_error_mmxin">Please scan again.</string>
+<string name="screen_unlock_fingerprint_mach_some_seconds_later">Fingerprint verification failed, please try again in %2d seconds or use other ways to unlock.</string>
+<string name="quick_boot_contacts">Select a contact</string>
+
+<string name="finger_toast_tip_fingername_empty">Please set a name for this fingerprint</string>
+<string name="finger_toast_tip_fingername_repet">This name is already used</string>
+<string name="finger_toast_tip_fingerdata_empty">Please set a name for this fingerprint</string>
+<string name="finger_toast_tip_fingerdata_repet">Your fingerprint already exists</string>
+<string name="finger_choice_create_finger">New fingerprints</string>
+<string name="finger_toast_tip_fingername_cannot_empty">Fingerprint name cannot be empty</string>
+
+<string name="finger_for_screen_lock">Screen Lock</string>
+<string name="finger_for_privacy_lock">Privacy Lock</string>
+<string name="finger_no_function">Unspecified functions</string>
+
+<string name="finger_my_setting">My Settings</string>
+<string name="change_password">Change security pattern</string>
+<string name="change_potection">Change security question</string>
+
+<string name="set_encrypt_activity_name">Set passwords</string>
+<string name="parrern_reset_title">Reset</string>
+<string name="confirm_number_encrypt">"Confirm digital password"</string>
+<string name="make_number_password_title">Using the digital passwords</string>
+<string name="set_pattern_title">Drawing privacy lock patterns</string>
+<string name="set_pattern_title_main">Set gestures password</string>
+
+<string name="make_pattern_password_title">Using pattern passwords</string>
+<string name="set_number_title_main">Set digital password</string>
+<string name="release_finger_title">Release your finger after finishing</string>
+<string name="lockpattern_need_to_unlock">"Drawing privacy lock patterns again"</string>
+<string name="confirm_encrypt">"Confirm passwords"</string>
+<string name="lockpattern_check_error">"Double input patterns are inconsistent . "</string>
+<string name="password_potection_activity_name">Set security questions</string>
+<string name="secure_dialog_title">Security questions</string>
+<string name="secure_dialog_ok">OK</string>
+<string name="secure_dialog_cancel">CANCEL</string>
+<string name="question_password_title">Forget gestures or passwords , resetting by security question</string>
+<string name="question_password_hint">Please enter the answer (up to 20 characters)</string>
+<string name="complete">Done</string>
+<string name="finger_enroll_step">Next</string>
+<string name="setting_success">Setting successful</string>
+<string name="check_password_null">You haven\'t input the answer</string>
+<string name="answer_password_question">Answer security questions</string>
+<string name="check_password_error">Validatin fails,input again please.</string>
+<string name="question_password_hint_sub">please input answer</string>
+<string name="fingerprint_check_success">Fingerprints verification successful !</string>
+<string name="fingerprint_check_fail">Fingerprints verification failed ! </string>
+   <string name="fingerprint_error">Fingerprints error !</string>
+<string name="check_title">Decryption and Authentication</string>
+<string name="lockpattern_input_error">"Incorrect (You can try %d times)"</string>
+<string name="lockpattern_input_error_sub">"Incorrect"</string>
+<string name="pattern_check_number_too_much">Verify the number of too much!</string>
+<string name="check_pattern_title_sub">Privacy password</string>
+<string name="check_pattern_title">Password or fingerprint</string>
+<string name="fingerprint_bottom_hint_android_m_ver">Touch the fingerprint scanner to unlock.</string>
+<string name="fprget_password_menu">Forget your password</string>
+<string name="switch_on">On</string>
+<string name="switch_off">Off</string>
+<string name="finger_ed_delete_tips">After deleting , assigned fingerprint function is not available , confirm to delete ?</string>
+<string name="finger_ed_delete_title">Delete</string>
+
+<string name="set_pattern_unlock_title">Set an unlock pattern</string>
+<string name="finger_draw_summary">Use your finger to draw</string>
+<string name="set_pin_unlock_title">Type a PIN code</string>
+<string name="finger_pin_summary">Use the keyboard to set it</string>
+<string name="back_button">BACK</string>
+<string name="next_button">NEXT</string>
+<string name="chang_pin_code">Use a &#038;pin code</string>
+<string name="chang_pattern">Use an &#038;unlock pattern</string>
+<string name="pin_type_title_show">Your PIN must use at least 4 characters</string>
+<string name="lockpattern_too_short">Connect at least 4 dots,try again</string>
+<string name="release_finger_when_done">Release finger when done</string>
+<string name="confirm_your_pattern">Confirm your pattern</string>
+<string name="confirm_your_pin">Confirm your PIN code</string>
+<string name="patterns_not_match">Patterns do not match,try again</string>
+<string name="pin_not_match">PINs do not match,try again</string>
+<string name="apps_lock_title">Files lock configuration</string>
+<string name="set_secure_question">Set a secure question</string>
+<string name="set_secure_question_summary">Retrieve your password if lost</string>
+<string name="enter_the_answer">Enter the answer</string>
+<string name="well_done">Well done!</string>
+<string name="now_set">Your are now set!</string>
+
+<string name="navigation_bar_display">Navigation bar display</string>
+<string name="navigation_bar_type">Navigation bar type</string>
+<string name="navigation_default">Default</string>
+<string name="navigation_overturn">Overturn</string>
+
+<string name="too_many_attempts_try_again_later">Too many attempts, Try again later</string>
+
+<string name="security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled">Screen lock option disabled. You can still use your fingerprint to authorize purchases and app access.</string>
+<string name="security_settings_fingerprint_enroll_disclaimer">In addition to unlocking your phone, you can also use your fingerprint to apps access</string>
+<string name="security_settings_fingerprint_enroll_disclaimer_no_payment">In addition to unlocking your phone, you can also use your fingerprint to apps access</string>
+<string name="fingerprint_add_title">Add fingerprint</string>
+<string name="fingerprint_settings_ed_title">Settings</string>
+<string name="fingerprint_settings_ed_delete">DELETE</string>
+<string name="fingerprint_settings_ed_ok">OK</string>
+<string name="fingerprint_add_max">You can add up to <xliff:g id="count" example="5">%d</xliff:g> fingerprints</string>
+
+<string name="secure_question_father_name">Your father\'s name?</string>
+<string name="secure_question_mother_name">Your mother\'s name?</string>
+<string name="secure_question_juniorschool_name">Your junior\'s high school?</string>
+<string name="secure_question_seniorschool_name">Your senior\'s high school?</string>
+<string name="secure_question_movie_name">Your favorite movie?</string>
+
+
+<string name="fingerprint_acquired_enroll_duplicate">This fingerprint is already registered. Please try another one.</string>
+<string name="fingerprint_acquired_enroll_too_nearby">Adjust your finger position to register the edges of your fingerprint</string>
+<string name="fingerprint_enroll_full">Fingerprint is full.</string>
+
+<string name="fingerprint_backtouch">Fingerprint backtouch</string>
+<string name="sensor_capture_title">Take pictures</string>
+<string name="sensor_capture_summary">At the camera interface,touch the fingerprint sensor to take pictures.</string>
+<string name="sensor_continous_capture_title">Continuous capture</string>
+<string name="sensor_continous_capture_summary">At the camera interface,long press the fingerprint sensor to continuous capture.</string>
+<string name="sensor_answer_call_title">Answer incoming calls</string>
+<string name="sensor_answer_call_summary">At the call interface,long press the fingerprint sensor to answer incoming calls.</string>
+<string name="sensor_stop_alarm_title">Stop alarm</string>
+<string name="sensor_stop_alarm_summary">At the alarm clock ringing interface,long press the fingerprint sensor to Stop alarm.</string>
+<string name="sensor_display_notification_title">Display notification panel</string>
+<string name="sensor_display_notification_summary">On the fingerprint sensor,sliding down or up to display or hide notification panel.</string>
+<string name="sensor_switch_page_title">Page switching</string>
+<string name="sensor_switch_page_summary">On the fingerprint sensor,sliding right or left to switch pages.</string>
+<string name="call_status_enroll_fingerprint">call status does not support fingerprint enrollment.</string>
+<string name="quick_boot_shortcuts_item_default">Launch the Application</string>
+<string name="google_map_itinerary">Itinerary</string>
+<string name="search_hint2">Search</string>
+
+    
+    <string name="myos_security_settings_fingerprint_enroll_introduction_message">"Fingerprint can be used to:\n 1、Wake up and unlock phone.\n 2、quick start app or make phone calls while screen is locked.\n\nNote: To ensure your privacy and property safety, we recommend to use password along with fingerprint."</string>
+
+    <string name="your_father_name">Your father\'s name?</string>
+    <string name="your_mother_name">Your mother\'s name?</string>
+    <string name="your_middle_school_name">Your junios\'s high school?</string>
+    <string name="your_high_school_name">Your senior\'s high school?</string>
+    <string name="your_famous_movie">Your favorite movie?</string>
+
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+	android:title="@string/fingerprint_title"
+	settings:keywords="@string/fingerprint_title">
+
+    <PreferenceCategory
+        android:key="fingerprint_category"
+        android:title="@string/fingerprint_gategory">
+        <PreferenceScreen
+            android:key="fingerprint_item"
+            android:title="@string/fingerprint_title"
+            android:summary="@string/fingerprint_summary"/>
+
+    <PreferenceScreen
+        android:key="app_and_file_lock"
+        android:title="@string/file_lock_title"
+        android:summary="@string/app_and_file_lock_summary"/>
+    
+    <PreferenceScreen
+        android:key="quick_boot"
+        android:title="@string/quick_boot_title"
+        android:summary="@string/quick_boot_summary"/>
+        
+    </PreferenceCategory>
+<!--
+	<PreferenceCategory
+        android:key="navigation_category"
+        android:title="@string/navigation_category">
+        <com.android.settings.NavigationBarSettings
+            android:key="navigation_bar"
+            android:title="@string/navgation_bar_display" />
+    
+	    <SwitchPreference
+		        android:key="navigation_bar_display"
+		        android:title="@string/navigation_bar_display"
+	            />
+
+		<PreferenceScreen
+		        android:key="navigation_bar_type"
+		        android:title="@string/navigation_bar_type"
+		        />
+	</PreferenceCategory>
+-->
+    <SwitchPreference
+        android:key="sensor_button"
+        android:title="@string/sensor_button_title"
+        android:summary="@string/sensor_button_summary"
+        android:persistent="false" />
+
+	<Preference android:key="pref_key_applock" />
+	<Preference android:key="pref_key_xlocker" />
+
+    <!--add for fingerprint_backtouch_category,start-->
+    <PreferenceCategory
+        android:key="fingerprint_backtouch_category"
+        android:title="@string/fingerprint_backtouch">
+        
+        <SwitchPreference
+            android:key="sensor_capture"
+            android:title="@string/sensor_capture_title"
+            android:summary="@string/sensor_capture_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="sensor_continous_capture"
+            android:title="@string/sensor_continous_capture_title"
+            android:summary="@string/sensor_continous_capture_summary"
+            android:persistent="false" />
+    
+        <SwitchPreference
+            android:key="sensor_answer_call"
+            android:title="@string/sensor_answer_call_title"
+            android:summary="@string/sensor_answer_call_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="sensor_stop_alarm"
+            android:title="@string/sensor_stop_alarm_title"
+            android:summary="@string/sensor_stop_alarm_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="sensor_display_notification"
+            android:title="@string/sensor_display_notification_title"
+            android:summary="@string/sensor_display_notification_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="sensor_switch_page"
+            android:title="@string/sensor_switch_page_title"
+            android:summary="@string/sensor_switch_page_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
+    <!--add for fingerprint_backtouch_category,end-->
+
+</PreferenceScreen>

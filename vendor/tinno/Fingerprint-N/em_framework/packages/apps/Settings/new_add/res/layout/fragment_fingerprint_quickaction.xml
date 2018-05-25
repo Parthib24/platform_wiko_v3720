@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/finger_list_layout"    
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    > 
+<!--
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:layout_marginLeft="@dimen/layout_left_margin_gap"
+    android:layout_marginRight="@dimen/layout_right_margin_gap"
+    android:layout_marginTop="@dimen/layout_Top_margin_gap"
+    android:layout_marginBottom="@dimen/layout_Bottom_margin_gap"
+    android:textSize="@dimen/style_title_text_size"
+    android:textColor="@color/style_title_color"
+    android:text="@string/fingerprint_edit_title"/>
+
+  <View android:background="?android:attr/dividerHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height=".9dp" />	  
+
+<TextView
+    android:id="@+id/finger_list_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/layout_left_margin_gap"
+    android:layout_marginRight="@dimen/layout_right_margin_gap"
+    android:layout_marginTop="@dimen/layout_category_Top_margin_gap"
+    android:layout_marginBottom="@dimen/layout_category_Bottom_margin_gap"
+    android:textSize="@dimen/style_category_text_size"
+    android:textColor="@color/style_category_color"
+    android:text="@string/fingerprint_list_title"/>
+ -->      
+         <ListView
+             android:id="@+id/finger_list"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:descendantFocusability="blocksDescendants"
+             android:fastScrollAlwaysVisible="false"
+	      android:dividerHeight="1dip"
+             android:scrollbars="none"
+             android:divider="@drawable/quick_action_divider">
+         </ListView> 
+<!--
+  <View 
+	android:id="@+id/my_fingerprint_check_prompt_line"
+	android:background="?android:attr/dividerHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+	 />	       
+<TextView
+    android:id="@+id/my_fingerprint_check_prompt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/layout_left_margin_gap"
+    android:layout_marginRight="@dimen/layout_right_margin_gap"
+    android:layout_marginTop="5dip"
+    android:gravity="center"
+    android:textColor="@color/style_preference_summary_color"
+    android:textSize="@dimen/style_preference_summary_text_size"
+    android:text="@string/find_fingerprint"/>
+-->
+</LinearLayout>

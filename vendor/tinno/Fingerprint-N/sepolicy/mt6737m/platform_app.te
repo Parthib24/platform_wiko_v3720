@@ -1,0 +1,24 @@
+# Add by sileadinc begin
+# Date: 2016/05/15
+# Purpose: allow FactoryTest apk write property
+# Package: www.silead
+#allow platform_app property_socket:sock_file { read write };
+#allow platform_app tmpfs:dir { read write };
+
+# Date: 2016/10/15
+# Operation: Fingerprint fix multipleUser bug on Android-6.0
+# Purpose: allow SystemUI to read/write xml under '/data/silead/' file path
+allow platform_app fpsvcd_data_file:dir { write add_name remove_name read open search rmdir getattr };
+allow platform_app fpsvcd_data_file:file { create write open read getattr setattr unlink };
+allow platform_app fpsvcd_tmpfs:file { read write open };
+allow platform_app fpsvcd:dir { read open };
+# Add by sileadinc end
+
+# ELAN
+allow platform_app elanfp_device:chr_file rw_file_perms;
+
+# Guomingyi 2016/03/27 add.
+# Package: com.ape.encryptmanager.service
+# Class : com.ape.encryptmanager.service.EncryptService
+allow platform_app EncryptService:service_manager find;
+

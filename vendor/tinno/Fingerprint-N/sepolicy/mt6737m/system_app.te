@@ -1,0 +1,50 @@
+
+# ELAN
+allow system_app elanfp_device:chr_file rw_file_perms;
+allow system_app elanfp_device:chr_file { read write ioctl open };
+
+# Goodix
+allow system_app gx_fpd_device:chr_file { read write ioctl open };
+
+# Add by sileadinc begin
+allow system_app fingerprintd:binder call;
+
+# Date: 2016/03/18
+# Purpose: add for fp.apk create file under '/data/silead/' file path
+allow system_app fpsvcd_data_file:dir { create write add_name remove_name read open search getattr rmdir setattr };
+allow system_app fpsvcd_data_file:file { unlink getattr setattr create write open read rename };
+allow system_app media_rw_data_file:dir { getattr };
+
+# Date: 2016/04/13
+# Purpose: add for starting cloudtestsuited in apk
+allow system_app fpsvcd_tmpfs:file { read write open getattr };
+allow system_app fpsvcd_exec:file { getattr read execute open execute_no_trans };
+allow system_app fpsvcd:dir { read open write };
+allow system_app tmpfs:dir { read write getattr add_name };
+
+# Date: 2016/05/11
+# Purpose: add for FactoryTest.apk to init the system files
+# Package: www.silead
+allow system_app system_app_tmpfs:file { create open };
+allow system_app silead_fp_dev_device:chr_file { read write ioctl open };
+allow system_app system_app:netlink_kobject_uevent_socket { create setopt bind read };
+
+# Date: 2016/09/25
+# Operation: Fingerprint fix fpsvcd_remoteApi bug
+# Purpose: allow fpsvcd_remoteApi to read fp file
+allow system_app fingerprintd:dir { read open };
+#for factorytest apk access watch tee device, remove the comment below
+#allow system_app teetz_device:chr_file { read write ioctl open };
+# Add by sileadinc end
+
+# Guomingyi 2016/03/27 add.
+# Package: com.ape.encryptmanager.service
+# Class : com.ape.encryptmanager.service.EncryptService
+allow system_app EncryptService:service_manager add;
+allow system_app EncryptService:service_manager find;
+
+allow system_app tinno_prop:property_service set;
+
+allow system_app tinno_prop:file open;
+allow system_app tinno_prop:file read;
+allow system_app tinno_prop:file getattr;

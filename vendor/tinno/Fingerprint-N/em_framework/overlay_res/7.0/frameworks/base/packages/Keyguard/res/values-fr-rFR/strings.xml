@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="fingerprint_keyguard_indication">FINGER OR PINCODE </string>
+    <string name="kg_pattern_instructions_with_fingerprint">Déverrouillez via votre empreinte digitale ou dessinez votre schema</string>
+    <string name="kg_pin_instructions_with_fingerprint">Déverrouillez via votre empreinte digitale ou entrez votre code PIN</string>
+    <string name="kg_password_instructions_with_fingerprint">Déverrouillez via votre empreinte digitale ou entrez le mot de passe</string>
+</resources>

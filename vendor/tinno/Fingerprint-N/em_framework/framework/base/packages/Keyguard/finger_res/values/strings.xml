@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+<add-resource type="string" name="screen_unlock_fingerprint_mach_some_seconds_later" />
+<string name="screen_unlock_fingerprint_mach_some_seconds_later">Fingerprint verification failed, please try again in %2d seconds or use other ways to unlock.</string>
+<resource>

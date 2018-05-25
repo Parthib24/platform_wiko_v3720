@@ -1,0 +1,7 @@
+
+# /dev/fp_dev
+allow system_server fp_drv_tinno_device:chr_file { read write open ioctl };
+
+# persist.tinno.xx
+allow system_server tinno_prop:property_service set;
+allow system_server tinno_prop:file { read getattr open };
